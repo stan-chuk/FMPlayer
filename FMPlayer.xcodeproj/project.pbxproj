@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F67AE60F1CDE368D0043CF46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */; };
+		F67AE6111CDE368D0043CF46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE6101CDE368D0043CF46 /* ViewController.swift */; };
+		F67AE6141CDE368D0043CF46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6121CDE368D0043CF46 /* Main.storyboard */; };
+		F67AE6161CDE368D0043CF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6151CDE368D0043CF46 /* Assets.xcassets */; };
+		F67AE6191CDE368D0043CF46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6171CDE368D0043CF46 /* LaunchScreen.storyboard */; };
+		F67AE6241CDE368D0043CF46 /* FMPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE6231CDE368D0043CF46 /* FMPlayerTests.swift */; };
+		F67AE62F1CDE368D0043CF46 /* FMPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE62E1CDE368D0043CF46 /* FMPlayerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F67AE6201CDE368D0043CF46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F67AE6031CDE368D0043CF46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F67AE60A1CDE368D0043CF46;
+			remoteInfo = FMPlayer;
+		};
+		F67AE62B1CDE368D0043CF46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F67AE6031CDE368D0043CF46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F67AE60A1CDE368D0043CF46;
+			remoteInfo = FMPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F67AE60B1CDE368D0043CF46 /* FMPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F67AE6101CDE368D0043CF46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F67AE6131CDE368D0043CF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F67AE6151CDE368D0043CF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F67AE6181CDE368D0043CF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F67AE61A1CDE368D0043CF46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F67AE61F1CDE368D0043CF46 /* FMPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F67AE6231CDE368D0043CF46 /* FMPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMPlayerTests.swift; sourceTree = "<group>"; };
+		F67AE6251CDE368D0043CF46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F67AE62A1CDE368D0043CF46 /* FMPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F67AE62E1CDE368D0043CF46 /* FMPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMPlayerUITests.swift; sourceTree = "<group>"; };
+		F67AE6301CDE368D0043CF46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F67AE6081CDE368D0043CF46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67AE61C1CDE368D0043CF46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67AE6271CDE368D0043CF46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F67AE6021CDE368D0043CF46 = {
+			isa = PBXGroup;
+			children = (
+				F67AE60D1CDE368D0043CF46 /* FMPlayer */,
+				F67AE6221CDE368D0043CF46 /* FMPlayerTests */,
+				F67AE62D1CDE368D0043CF46 /* FMPlayerUITests */,
+				F67AE60C1CDE368D0043CF46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F67AE60C1CDE368D0043CF46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F67AE60B1CDE368D0043CF46 /* FMPlayer.app */,
+				F67AE61F1CDE368D0043CF46 /* FMPlayerTests.xctest */,
+				F67AE62A1CDE368D0043CF46 /* FMPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F67AE60D1CDE368D0043CF46 /* FMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */,
+				F67AE6101CDE368D0043CF46 /* ViewController.swift */,
+				F67AE6121CDE368D0043CF46 /* Main.storyboard */,
+				F67AE6151CDE368D0043CF46 /* Assets.xcassets */,
+				F67AE6171CDE368D0043CF46 /* LaunchScreen.storyboard */,
+				F67AE61A1CDE368D0043CF46 /* Info.plist */,
+			);
+			path = FMPlayer;
+			sourceTree = "<group>";
+		};
+		F67AE6221CDE368D0043CF46 /* FMPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F67AE6231CDE368D0043CF46 /* FMPlayerTests.swift */,
+				F67AE6251CDE368D0043CF46 /* Info.plist */,
+			);
+			path = FMPlayerTests;
+			sourceTree = "<group>";
+		};
+		F67AE62D1CDE368D0043CF46 /* FMPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F67AE62E1CDE368D0043CF46 /* FMPlayerUITests.swift */,
+				F67AE6301CDE368D0043CF46 /* Info.plist */,
+			);
+			path = FMPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F67AE60A1CDE368D0043CF46 /* FMPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F67AE6331CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayer" */;
+			buildPhases = (
+				F67AE6071CDE368D0043CF46 /* Sources */,
+				F67AE6081CDE368D0043CF46 /* Frameworks */,
+				F67AE6091CDE368D0043CF46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMPlayer;
+			productName = FMPlayer;
+			productReference = F67AE60B1CDE368D0043CF46 /* FMPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F67AE61E1CDE368D0043CF46 /* FMPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F67AE6361CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayerTests" */;
+			buildPhases = (
+				F67AE61B1CDE368D0043CF46 /* Sources */,
+				F67AE61C1CDE368D0043CF46 /* Frameworks */,
+				F67AE61D1CDE368D0043CF46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F67AE6211CDE368D0043CF46 /* PBXTargetDependency */,
+			);
+			name = FMPlayerTests;
+			productName = FMPlayerTests;
+			productReference = F67AE61F1CDE368D0043CF46 /* FMPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F67AE6291CDE368D0043CF46 /* FMPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F67AE6391CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayerUITests" */;
+			buildPhases = (
+				F67AE6261CDE368D0043CF46 /* Sources */,
+				F67AE6271CDE368D0043CF46 /* Frameworks */,
+				F67AE6281CDE368D0043CF46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F67AE62C1CDE368D0043CF46 /* PBXTargetDependency */,
+			);
+			name = FMPlayerUITests;
+			productName = FMPlayerUITests;
+			productReference = F67AE62A1CDE368D0043CF46 /* FMPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F67AE6031CDE368D0043CF46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "祝韶明";
+				TargetAttributes = {
+					F67AE60A1CDE368D0043CF46 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 86EUQ6Z4G3;
+					};
+					F67AE61E1CDE368D0043CF46 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 86EUQ6Z4G3;
+						TestTargetID = F67AE60A1CDE368D0043CF46;
+					};
+					F67AE6291CDE368D0043CF46 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 86EUQ6Z4G3;
+						TestTargetID = F67AE60A1CDE368D0043CF46;
+					};
+				};
+			};
+			buildConfigurationList = F67AE6061CDE368D0043CF46 /* Build configuration list for PBXProject "FMPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F67AE6021CDE368D0043CF46;
+			productRefGroup = F67AE60C1CDE368D0043CF46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F67AE60A1CDE368D0043CF46 /* FMPlayer */,
+				F67AE61E1CDE368D0043CF46 /* FMPlayerTests */,
+				F67AE6291CDE368D0043CF46 /* FMPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F67AE6091CDE368D0043CF46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67AE6191CDE368D0043CF46 /* LaunchScreen.storyboard in Resources */,
+				F67AE6161CDE368D0043CF46 /* Assets.xcassets in Resources */,
+				F67AE6141CDE368D0043CF46 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67AE61D1CDE368D0043CF46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67AE6281CDE368D0043CF46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F67AE6071CDE368D0043CF46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67AE6111CDE368D0043CF46 /* ViewController.swift in Sources */,
+				F67AE60F1CDE368D0043CF46 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67AE61B1CDE368D0043CF46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67AE6241CDE368D0043CF46 /* FMPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F67AE6261CDE368D0043CF46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F67AE62F1CDE368D0043CF46 /* FMPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F67AE6211CDE368D0043CF46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F67AE60A1CDE368D0043CF46 /* FMPlayer */;
+			targetProxy = F67AE6201CDE368D0043CF46 /* PBXContainerItemProxy */;
+		};
+		F67AE62C1CDE368D0043CF46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F67AE60A1CDE368D0043CF46 /* FMPlayer */;
+			targetProxy = F67AE62B1CDE368D0043CF46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F67AE6121CDE368D0043CF46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F67AE6131CDE368D0043CF46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F67AE6171CDE368D0043CF46 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F67AE6181CDE368D0043CF46 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F67AE6311CDE368D0043CF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F67AE6321CDE368D0043CF46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F67AE6341CDE368D0043CF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FMPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.siuming-chuk.FMPlayer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F67AE6351CDE368D0043CF46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FMPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.siuming-chuk.FMPlayer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F67AE6371CDE368D0043CF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FMPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.siuming-chuk.FMPlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMPlayer.app/FMPlayer";
+			};
+			name = Debug;
+		};
+		F67AE6381CDE368D0043CF46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FMPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.siuming-chuk.FMPlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMPlayer.app/FMPlayer";
+			};
+			name = Release;
+		};
+		F67AE63A1CDE368D0043CF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FMPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.siuming-chuk.FMPlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FMPlayer;
+			};
+			name = Debug;
+		};
+		F67AE63B1CDE368D0043CF46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FMPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.siuming-chuk.FMPlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FMPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F67AE6061CDE368D0043CF46 /* Build configuration list for PBXProject "FMPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F67AE6311CDE368D0043CF46 /* Debug */,
+				F67AE6321CDE368D0043CF46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F67AE6331CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F67AE6341CDE368D0043CF46 /* Debug */,
+				F67AE6351CDE368D0043CF46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F67AE6361CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F67AE6371CDE368D0043CF46 /* Debug */,
+				F67AE6381CDE368D0043CF46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F67AE6391CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F67AE63A1CDE368D0043CF46 /* Debug */,
+				F67AE63B1CDE368D0043CF46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F67AE6031CDE368D0043CF46 /* Project object */;
+}
