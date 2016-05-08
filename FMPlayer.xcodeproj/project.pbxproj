@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		F67AE60F1CDE368D0043CF46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */; };
-		F67AE6111CDE368D0043CF46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE6101CDE368D0043CF46 /* ViewController.swift */; };
 		F67AE6141CDE368D0043CF46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6121CDE368D0043CF46 /* Main.storyboard */; };
 		F67AE6161CDE368D0043CF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6151CDE368D0043CF46 /* Assets.xcassets */; };
 		F67AE6191CDE368D0043CF46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6171CDE368D0043CF46 /* LaunchScreen.storyboard */; };
 		F67AE6241CDE368D0043CF46 /* FMPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE6231CDE368D0043CF46 /* FMPlayerTests.swift */; };
 		F67AE62F1CDE368D0043CF46 /* FMPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE62E1CDE368D0043CF46 /* FMPlayerUITests.swift */; };
+		F67AE63D1CDE3CDB0043CF46 /* ChannelListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE63C1CDE3CDB0043CF46 /* ChannelListTableViewController.swift */; };
+		F67AE63F1CDE3CF70043CF46 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE63E1CDE3CF70043CF46 /* PlayerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		F67AE60B1CDE368D0043CF46 /* FMPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F67AE6101CDE368D0043CF46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F67AE6131CDE368D0043CF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F67AE6151CDE368D0043CF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F67AE6181CDE368D0043CF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		F67AE62A1CDE368D0043CF46 /* FMPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67AE62E1CDE368D0043CF46 /* FMPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FMPlayerUITests.swift; sourceTree = "<group>"; };
 		F67AE6301CDE368D0043CF46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F67AE63C1CDE3CDB0043CF46 /* ChannelListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListTableViewController.swift; sourceTree = "<group>"; };
+		F67AE63E1CDE3CF70043CF46 /* PlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */,
-				F67AE6101CDE368D0043CF46 /* ViewController.swift */,
+				F67AE63C1CDE3CDB0043CF46 /* ChannelListTableViewController.swift */,
+				F67AE63E1CDE3CF70043CF46 /* PlayerModel.swift */,
 				F67AE6121CDE368D0043CF46 /* Main.storyboard */,
 				F67AE6151CDE368D0043CF46 /* Assets.xcassets */,
 				F67AE6171CDE368D0043CF46 /* LaunchScreen.storyboard */,
@@ -259,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F67AE6111CDE368D0043CF46 /* ViewController.swift in Sources */,
+				F67AE63F1CDE3CF70043CF46 /* PlayerModel.swift in Sources */,
 				F67AE60F1CDE368D0043CF46 /* AppDelegate.swift in Sources */,
+				F67AE63D1CDE3CDB0043CF46 /* ChannelListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +491,7 @@
 				F67AE6351CDE368D0043CF46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F67AE6361CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				F67AE6381CDE368D0043CF46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F67AE6391CDE368D0043CF46 /* Build configuration list for PBXNativeTarget "FMPlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				F67AE63B1CDE368D0043CF46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
