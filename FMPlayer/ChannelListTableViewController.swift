@@ -10,42 +10,59 @@ import UIKit
 
 class ChannelListTableViewController: UITableViewController {
 
+    let channelURL = NSURL(string: "https://www.douban.com/j/app/radio/channels")
+    var channelArray: NSArray = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let data = NSData(contentsOfURL: self.channelURL!)
+        do {
+            let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+            if jsonData["channels"] != nil {
+                self.channelArray = jsonData["channels"] as! NSArray
+                print("First print \(jsonData)")
+            }
+        } catch let error as NSError {
+            print("\(error.domain)")
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print("\(self.channelArray.count)")
+        return self.channelArray.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCellWithIdentifier("channels", forIndexPath: indexPath)
+        let cellData: NSDictionary = self.channelArray[indexPath.row] as! NSDictionary
+        print("Second print \(cellData)")
+        
+        if cellData["name"] != nil {
+            cell.textLabel?.text = cellData["name"] as? String
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
