@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F61542AF1CE1E9EE00B3BE34 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61542AE1CE1E9EE00B3BE34 /* SwiftyJSON.swift */; };
 		F67AE60F1CDE368D0043CF46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */; };
 		F67AE6141CDE368D0043CF46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6121CDE368D0043CF46 /* Main.storyboard */; };
 		F67AE6161CDE368D0043CF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F67AE6151CDE368D0043CF46 /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F61542AE1CE1E9EE00B3BE34 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		F67AE60B1CDE368D0043CF46 /* FMPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F67AE60E1CDE368D0043CF46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F67AE6131CDE368D0043CF46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 				F67AE6151CDE368D0043CF46 /* Assets.xcassets */,
 				F67AE6171CDE368D0043CF46 /* LaunchScreen.storyboard */,
 				F67AE61A1CDE368D0043CF46 /* Info.plist */,
-				F61542AE1CE1E9EE00B3BE34 /* SwiftyJSON.swift */,
 			);
 			path = FMPlayer;
 			sourceTree = "<group>";
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F61542AF1CE1E9EE00B3BE34 /* SwiftyJSON.swift in Sources */,
 				F67AE60F1CDE368D0043CF46 /* AppDelegate.swift in Sources */,
 				F67AE63D1CDE3CDB0043CF46 /* ChannelListTableViewController.swift in Sources */,
 			);
