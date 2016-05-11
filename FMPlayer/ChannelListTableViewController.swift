@@ -21,7 +21,7 @@ class ChannelListTableViewController: UITableViewController {
             let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
             if jsonData["channels"] != nil {
                 self.channelArray = jsonData["channels"] as! NSArray
-                print("First print \(jsonData)")
+                print("First print: \(jsonData)")
             }
         } catch let error as NSError {
             print("\(error.domain)")
@@ -53,9 +53,9 @@ class ChannelListTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("channels", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("channel", forIndexPath: indexPath)
         let cellData: NSDictionary = self.channelArray[indexPath.row] as! NSDictionary
-        print("Second print \(cellData)")
+        print("Second print: \(cellData)")
         
         if cellData["name"] != nil {
             cell.textLabel?.text = cellData["name"] as? String
@@ -64,6 +64,9 @@ class ChannelListTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
