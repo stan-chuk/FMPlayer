@@ -74,7 +74,7 @@ class ChannelListTableViewController: UITableViewController {
         let cellData: NSDictionary = self.channelArray[indexPath.row] as! NSDictionary
         let channel_id = cellData["channel_id"] as! String
         print("\(channel_id)")
-        delegate?.changeChannel(channel_id)
+        self.delegate?.changeChannel(channel_id)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     

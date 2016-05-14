@@ -102,10 +102,12 @@ class playViewController: UIViewController, UITableViewDataSource, ChannelProtoc
         return cell
     }
     
+    //实现协议中的方法
     func changeChannel(channel_id: String) {
         let url = NSURL(string: "https://douban.fm/j/mine/playlist?type=n&channel=\(channel_id)&from=mainsite")
         print("\(url!)")
         self.songURL = url
+        self.viewDidLoad()
     }
     
     @IBAction func showChannelList(sender: UIButton) {
@@ -113,9 +115,11 @@ class playViewController: UIViewController, UITableViewDataSource, ChannelProtoc
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController
-        let ctvc = destination as! ChannelListTableViewController
-        ctvc.delegate = self
+        if segue.identifier == "showChannelList" {
+            let destination = segue.destinationViewController
+            let ctvc = destination as! ChannelListTableViewController
+            ctvc.delegate = self
+        }
     }
     
     /*

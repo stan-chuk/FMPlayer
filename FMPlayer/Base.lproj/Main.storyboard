@@ -121,6 +121,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Vyd-Ua-7JU"/>
                     <connections>
                         <outlet property="playButton" destination="JTR-jC-goj" id="Pjc-rq-XgR"/>
                         <outlet property="progressView" destination="UFw-SS-7U7" id="7QZ-yn-XNN"/>
