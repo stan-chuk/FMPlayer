@@ -10,14 +10,15 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class playViewController: UIViewController, UITableViewDataSource {
+class playViewController: UIViewController, UITableViewDataSource, ChannelProtocol {
 
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     //默认说唱频道
-    let songURL = NSURL(string: "https://douban.fm/j/mine/playlist?type=n&channel=15&from=mainsite")
+    var songURL = NSURL(string: "https://douban.fm/j/mine/playlist?type=n&channel=15&from=mainsite")
     var songArray: NSArray = []
     var imageCache:Dictionary = [String: UIImage]()
     var audioPlayer = AVPlayerViewController()
@@ -31,6 +32,7 @@ class playViewController: UIViewController, UITableViewDataSource {
             let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             if jsonData["song"] != nil {
                 self.songArray = jsonData["song"] as! NSArray
+                tableView.reloadData()
             }
         } catch let error as NSError {
             print("\(error.domain)")
@@ -77,10 +79,17 @@ class playViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    //播放按钮控制
     @IBAction func PlayControl(sender: UIButton) {
-        
+        if sender.imageView?.image == UIImage(named: "play") {
+            sender.setImage(UIImage(named: "pause"), forState: UIControlState.Normal)
+            audioPlayer.player?.play()
+        } else {
+            sender.setImage(UIImage(named: "play"), forState: UIControlState.Normal)
+            audioPlayer.player?.pause()
+        }
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songArray.count
     }
@@ -88,23 +97,26 @@ class playViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("song", forIndexPath: indexPath)
         let cellData = self.songArray[indexPath.row] as! NSDictionary
-        let imageURLString = cellData["picture"] as? String
-        let imageURL = NSURL(string: imageURLString!)
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-        let dataTask = session.dataTaskWithURL(imageURL!) { (data, response, error) in
-            let image = UIImage(data: data!)
-            let mainQueue = NSOperationQueue.mainQueue()
-            mainQueue.addOperationWithBlock() {
-                cell.imageView?.image = image
-            }
-        }
-        dataTask.resume()
         cell.textLabel?.text = cellData["title"] as? String
         cell.detailTextLabel?.text = cellData["artist"] as? String
         return cell
     }
     
+    func changeChannel(channel_id: String) {
+        let url = NSURL(string: "https://douban.fm/j/mine/playlist?type=n&channel=\(channel_id)&from=mainsite")
+        print("\(url!)")
+        self.songURL = url
+    }
     
+    @IBAction func showChannelList(sender: UIButton) {
+        performSegueWithIdentifier("showChannelList", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController
+        let ctvc = destination as! ChannelListTableViewController
+        ctvc.delegate = self
+    }
     
     /*
     // MARK: - Navigation

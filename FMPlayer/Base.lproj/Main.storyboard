@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="48" id="g9O-l2-oN7"/>
                                     <constraint firstAttribute="height" constant="48" id="xJ3-Gt-iZC"/>
                                 </constraints>
-                                <state key="normal" image="play"/>
+                                <state key="normal" image="pause"/>
                                 <connections>
                                     <action selector="PlayControl:" destination="Qp0-Vr-3l1" eventType="touchUpInside" id="BeE-Qw-8bL"/>
                                 </connections>
@@ -41,7 +41,7 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bpP-Og-8IA" kind="show" id="Eb9-JL-lpJ"/>
+                                    <action selector="showChannelList:" destination="Qp0-Vr-3l1" eventType="touchUpInside" id="O7W-Qp-6nT"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-SL-rbz">
@@ -125,6 +125,8 @@
                         <outlet property="playButton" destination="JTR-jC-goj" id="Pjc-rq-XgR"/>
                         <outlet property="progressView" destination="UFw-SS-7U7" id="7QZ-yn-XNN"/>
                         <outlet property="songImage" destination="qq8-ix-Hy9" id="5PE-np-Sek"/>
+                        <outlet property="tableView" destination="l3f-SL-rbz" id="bwr-th-Yer"/>
+                        <segue destination="bpP-Og-8IA" kind="show" identifier="showChannelList" id="uFJ-aZ-iue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csa-bj-vN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,6 +180,6 @@
     </scenes>
     <resources>
         <image name="music" width="95" height="110"/>
-        <image name="play" width="64" height="64"/>
+        <image name="pause" width="64" height="64"/>
     </resources>
 </document>

@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol ChannelProtocol {
+    func changeChannel(channel_id: String)
+}
+
 class ChannelListTableViewController: UITableViewController {
 
     let channelURL = NSURL(string: "https://www.douban.com/j/app/radio/channels")
     var channelArray: NSArray = []
+    var delegate: ChannelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +71,10 @@ class ChannelListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cellData: NSDictionary = self.channelArray[indexPath.row] as! NSDictionary
+        let channel_id = cellData["channel_id"] as! String
+        print("\(channel_id)")
+        delegate?.changeChannel(channel_id)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
