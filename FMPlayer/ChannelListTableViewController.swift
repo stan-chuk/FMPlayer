@@ -8,14 +8,20 @@
 
 import UIKit
 
+protocol ChannelProtocol {
+    func changeChannel(channel_id: String)
+}
+
 class ChannelListTableViewController: UITableViewController {
 
     let channelURL = NSURL(string: "https://www.douban.com/j/app/radio/channels")
     var channelArray: NSArray = []
+    var delegate: ChannelProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //获取频道信息
         let data = NSData(contentsOfURL: self.channelURL!)
         do {
             let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
@@ -65,8 +71,13 @@ class ChannelListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cellData: NSDictionary = self.channelArray[indexPath.row] as! NSDictionary
+        let channel_id = cellData["channel_id"] as! String
+        print("\(channel_id)")
+        self.delegate?.changeChannel(channel_id)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
