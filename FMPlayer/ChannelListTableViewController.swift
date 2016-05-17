@@ -46,11 +46,6 @@ class ChannelListTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         print("\(self.channelArray.count)")
@@ -66,14 +61,16 @@ class ChannelListTableViewController: UITableViewController {
         if cellData["name"] != nil {
             cell.textLabel?.text = cellData["name"] as? String
         }
+        
 
         return cell
     }
-
+    
+    //通过代理传递频道的 id 回播放页面
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cellData: NSDictionary = self.channelArray[indexPath.row] as! NSDictionary
-        let channel_id = cellData["channel_id"] as! String
-        print("\(channel_id)")
+        let channel_id: String = "\(cellData["channel_id"]!)"
+        print(channel_id)
         self.delegate?.changeChannel(channel_id)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
