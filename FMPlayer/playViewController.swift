@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AVKit
 
-class playViewController: UIViewController, UITableViewDataSource, ChannelProtocol {
+class playViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChannelProtocol {
 
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var progressView: UIProgressView!
@@ -19,9 +19,15 @@ class playViewController: UIViewController, UITableViewDataSource, ChannelProtoc
     
     //默认说唱频道
     var songURL = NSURL(string: "https://douban.fm/j/mine/playlist?type=n&channel=15&from=mainsite")
+    //储存歌曲数据
     var songArray: NSArray = []
+    //储存图片缓存
     var imageCache:Dictionary = [String: UIImage]()
+    //歌曲播放器
     var audioPlayer = AVPlayerViewController()
+    //定时器
+    var timer = NSTimer()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +62,9 @@ class playViewController: UIViewController, UITableViewDataSource, ChannelProtoc
     //设置歌曲封面
     func onSetSongImage(url: String) {
         let imageURL = NSURL(string: url)
+        
+        //当缓存里没有相应的图片
+        if imageCache[url] == nil {
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let dataTask = session.dataTaskWithURL(imageURL!) { (data, response, error) in
             let image = UIImage(data: data!)
@@ -63,15 +72,31 @@ class playViewController: UIViewController, UITableViewDataSource, ChannelProtoc
             mainQueue.addOperationWithBlock() {
                 self.songImage.image = image
             }
+            self.imageCache[url] = image
         }
         dataTask.resume()
+        } else {
+            self.songImage.image = self.imageCache[url]
+        }
     }
     
     //播放歌曲
     func playSong(url: String) {
         let songURL = NSURL(string: url)
-        audioPlayer.player = AVPlayer(URL: songURL!)
-        audioPlayer.player?.play()
+//        self.audioPlayer.player?.pause()
+        self.audioPlayer.player = AVPlayer(URL: songURL!)
+        self.audioPlayer.player?.play()
+        
+        //先停止计时器
+        self.timer.invalidate()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(changeProgress), userInfo: nil, repeats: true)
+    }
+    
+    func changeProgress() {
+        let currentTime = audioPlayer.player?.currentTime()
+        let durationTime = audioPlayer.player?.currentItem?.duration
+        let timeScale = (currentTime!.seconds)/(durationTime!.seconds)
+        self.progressView.setProgress(Float(timeScale), animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -100,6 +125,19 @@ class playViewController: UIViewController, UITableViewDataSource, ChannelProtoc
         cell.textLabel?.text = cellData["title"] as? String
         cell.detailTextLabel?.text = cellData["artist"] as? String
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cellData = self.songArray[indexPath.row] as! NSDictionary
+        
+        //设置当前歌曲的封面
+        let imageURL = cellData["picture"] as! String
+        onSetSongImage(imageURL)
+        //播放选中行的歌曲
+        let songURL = cellData["url"] as! String
+        playSong(songURL)
+        
     }
     
     //实现协议中的方法
