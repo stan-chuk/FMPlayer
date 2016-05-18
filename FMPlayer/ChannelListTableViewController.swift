@@ -51,7 +51,14 @@ class ChannelListTableViewController: UITableViewController {
         print("\(self.channelArray.count)")
         return self.channelArray.count
     }
-
+    
+    //cell 出现的动画
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
+        UIView.animateWithDuration(0.3) {
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("channel", forIndexPath: indexPath)

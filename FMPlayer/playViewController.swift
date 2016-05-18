@@ -115,6 +115,14 @@ class playViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    //cell 出现的动画
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
+        UIView.animateWithDuration(0.3) { 
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songArray.count
     }
